@@ -2,6 +2,7 @@ from sqlalchemy import Column, Integer, String, Float, Date, ForeignKey, create_
 from sqlalchemy.orm import relationship, declarative_base, sessionmaker
 
 # Database setup
+# DATABASE_URL = 'sqlite:///./databases/economic_database.db'
 DATABASE_URL = 'sqlite:///../../databases/economic_database.db'
 
 engine = create_engine(DATABASE_URL, echo=True, future=True)
