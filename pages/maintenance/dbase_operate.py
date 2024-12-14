@@ -68,7 +68,7 @@ with tab2:
         macro_name = st.text_input("Macro name:")
         country_name = country_db_operator.read_all_records()
         country_dict = {country.name: country.id for country in country_name}
-        country_id = st.selectbox("Country:", country_dict.keys())
+        country_id = st.selectbox("Country:", list(country_dict.keys()))
         submitted_macro = st.form_submit_button("Submit")
         if submitted_macro:
             macro_db_operator.create_record(name=macro_name.upper(), country_id=country_dict[country_id])
