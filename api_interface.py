@@ -1,5 +1,6 @@
-import requests
 import json
+import requests
+
 
 def fetch_gus_data(url):
     """Fetches data from the Statistics Poland (GUS) API.
@@ -41,7 +42,7 @@ if indicators_data:
 # Example usage for specific indicator data (requires its ID):
 # First, you need to retrieve the list of indicators and find the ID of the one you need.
 # This example uses ID '1' (Consumer price index)
-indicator_data_url = "https://api-sdp.stat.gov.pl/api/1.0.0/indicators/indicator-data-indicator?id-wskaznik=639&id-rok=2023&lang=pl"
+indicator_data_url = "https://api-sdp.stat.gov.pl/api/1.0.0/indicators/indicator-data-indicator?id-wskaznik=2477&id-rok=2002&lang=pl"
 specific_indicator_data = fetch_gus_data(indicator_data_url)
 
 if specific_indicator_data:
@@ -50,3 +51,4 @@ if specific_indicator_data:
     # Displaying the first few records as an example:
     for i in specific_indicator_data:
         print(i)
+
